@@ -1,0 +1,28 @@
+[
+  {
+    "title": "test",
+    "description": "test",
+    "objectives": "test",
+    "roles": "Developer",
+    "standards": "IEEE-730",
+    "test_plan": "test",
+    "defect_management": "test",
+    "reviews": "test",
+    "supplier_control": "test",
+    "references": "test",
+    "purpose": "test"
+  },
+  {
+    "title": "Equifax Data Breach (2017)",
+    "description": "Equifax\u2019s consumer-credit web portal was meant to let users dispute credit-report errors. A forgotten, vulnerable Struts component and missing patching process left the portal open to remote-code execution, exposing ~148 million consumer records.",
+    "objectives": "1. Timely patch management for all third-party frameworks (< 72 h SLA after CVE release).\r\n2. Hardened configuration & least privilege on all internet-facing portals.\r\n3. Continuous vulnerability scanning to verify that patches and config controls remain in place.",
+    "roles": "Security Auditor",
+    "standards": "OWASP Guidelines",
+    "test_plan": "Weekly authenticated vulnerability scan (N-map + OpenVAS).\r\nQuarterly external pen-test targeting public portals.\r\nVerify CVE-2017-5638 exploit blocked after every build via unit test harness.",
+    "defect_management": "All security findings logged in Jira with \u201cSEC-\u201d key, severity S0\u2013S4, 24-h SLA for S0/S1. Fix linked to commit and re-tested before closure.",
+    "reviews": "Monthly patch-status audit against NVD list.\r\nQuarterly SQA review of compliance with OWASP and IEEE 730 process clauses.\r\nFindings reported at CISO staff meeting.",
+    "supplier_control": "All third-party components tracked in SBOM; suppliers must issue patch notices within 24 h and provide SHA-256 hashes for integrity checks.",
+    "references": "United States Government Accountability Office. (2018). DATA PROTECTION actions taken by Equifax and federal agencies in response to the 2017 breach. In GAO-18-559. https://www.gao.gov/assets/gao-18-559.pdf\r\n\r\nOWASP. (2021). A05 Security Misconfiguration - OWASP Top 10:2021. https://owasp.org/Top10/A05_2021-Security_Misconfiguration/\r\n\r\nIEEE 730-2014 Standard for Software Quality Assurance Processes. (2014). https://standards.ieee.org/ieee/730/5284/",
+    "purpose": "Prevent recurrence of large-scale data breaches by closing patch-management gaps, enforcing secure configuration, and validating fixes through continuous security testing."
+  }
+]

@@ -15,17 +15,17 @@ def index():
 @app.route("/submit", methods=["POST"])
 def submit():
     submission = {
-        "title": request.form["title"],
-        "description": request.form["description"],
-        "objectives": request.form["objectives"],
-        "roles": request.form["roles"],
-        "standards": request.form["standards"],
-        "test_plan": request.form["test_plan"],
-        "defect_management": request.form["defect_management"],
-        "reviews": request.form["reviews"],
-        "supplier_control": request.form["supplier_control"],
-        "references": request.form["references"],
-        "purpose": request.form["purpose"]
+        "title":            request.form.get("title", ""),
+        "description":      request.form.get("description", ""),
+        "objectives":       request.form.get("objectives", ""),
+        "roles":            request.form.get("roles", ""),
+        "standards":        request.form.get("standards", ""),
+        "test_plan":        request.form.get("test_plan", ""),
+        "defect_management":request.form.get("defect_management", ""),
+        "reviews":          request.form.get("reviews", ""),
+        "supplier_control": request.form.get("supplier_control", ""),
+        "references":       request.form.get("references", ""),
+        "purpose":          request.form.get("purpose", "")
     }
 
     if DATA_FILE.exists():
